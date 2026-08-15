@@ -1,0 +1,35 @@
+{
+  "name": "nexusqueue",
+  "version": "1.0.0",
+  "description": "A hybrid, high-throughput in-memory background job processing engine. NexusQueue pairs a low-level C++ queue core (via Node-API) with an asynchronous Node.js / Express REST API and PostgreSQL persistence, designed for predictable low-latency task scheduling and worker execution.",
+  "main": "src/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-addon-api": "^8.9.2",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.1",
+    "globals": "^17.11.0",
+    "jest": "^30.4.2",
+    "node-gyp": "^13.0.1"
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/hamidrezaghavami/NexusQueue.git"
+}
+}
