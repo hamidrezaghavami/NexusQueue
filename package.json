@@ -10,7 +10,7 @@
     "build": "node-gyp rebuild",
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -31,5 +31,11 @@
   "repository": {
   "type": "git",
   "url": "https://github.com/hamidrezaghavami/NexusQueue.git"
+  },
+  "pnpm": {
+  "allowedDeprecatedVersions": {
+    "glob": "*",
+    "inflight": "*"
+  }
 }
 }
