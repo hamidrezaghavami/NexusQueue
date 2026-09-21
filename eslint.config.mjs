@@ -10,6 +10,7 @@ export default [
       globals: {
         ...globals.node,
         ...globals.jest,
+        __ENV: 'readonly'
       },
     },
     rules: {
