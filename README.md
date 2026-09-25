@@ -87,10 +87,24 @@ npm run dev
 ```
 ### Testing & Benchmarking:
 Jest:
-npm run test
+`npm run test`
 
 Code Quality & Linting:
-npx eslint .
+`npx eslint .`
 
 Load Testing with k6:
-k6 run load-test.js
+` node --env-file=.env src/server.js `
+in another terminal write:
+`k6 run load-test.js`
+
+### Performance & Load Test Results (k6)
+```
+Tested with 200 concurrent virtual users over 50 seconds.
+
+✓ error_rate.....................: 0.00%   (Zero server crashes)
+✓ http_req_duration (p95)........: 42.81ms (Unblocked event loop)
+
+http_reqs........................: 228,195 (4,563 requests/second)
+jobs_enqueued....................: 34,406  (688 DB writes/second)
+queue_full_errors (HTTP 429).....: 193,789 (Expected backpressure)
+```
